@@ -33,7 +33,7 @@ class Data:
 def main():
     data = Data("data.txt")
     print len(data.entries)
-    kws = [i.strip().split(',') for i in open("kws.txt")]
+    kws = [i.strip().split(',') for i in open("kws.config")]
     for kw in kws:
         data.removeKeywordEntries(kw)
     print len(data.entries)
